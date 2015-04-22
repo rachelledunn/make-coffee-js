@@ -51,15 +51,33 @@
     var myRevenueMessage = document.getElementById("revenue");
     var myCoffeeMessage = document.getElementById("message");
 
-    // Change the initiam image displayed by mImage to new image
+    // Change the initial image displayed by mImage to new image
 
     myImage.setAttribute('src','static/coffee_beans.jpg');
 
+
+    function backToBeans() {
+        myImage.setAttribute('src','static/coffee_beans.jpg');
+    }
+    function coffeeMug() {
+        myImage.setAttribute('src','static/coffee_mug.jpg');
+        setTimeout(backToBeans, 1000);
+    }
+
     //function for makeCoffee
     function makeCoffee () {
-        myImage.setAttribute('src','static/coffee_mug.jpg');
+        myImage.setAttribute('src','static/coffee_machine.jpg');
+        setTimeout(coffeeMug,1500);
+               
     }
+
     myImage.addEventListener('click',makeCoffee);
+    
+    // function backToBeans() {
+    //     myImage.setAttribute('src','static/coffee_beans.jpg');
+    // }
+    // myImage.setTimeout(backToBeans, 500);
+    //myImage.setTimeout()
 
     // use this dictionary in further study step
 
